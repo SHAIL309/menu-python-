@@ -1,0 +1,77 @@
+import os
+import pyttsx3
+import string
+
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)  #changing index changes voices but only 0 and 1 are working here
+engine.runAndWait()
+engine.say('Hello')
+
+pyttsx3.speak("welcome to the menu ")
+print("\t\t*************** MY MENU ***************")
+
+pyttsx3.speak("choose any of the  app you wanna open from the below list:")
+ 
+while True:
+ 
+ print(" \t->opera \n\t->safari \n\t->iMovie \n\t->keynote \n\t->VLC \n\t->one-drive \n\t->teamviewer \n\t->zoom(video calling app) \n\t->whatsapp \n\t->winzip \n\t->Xcode  \n\t->SUBLIME TEXT \n\t-> android file transfer \n\t->to exit the program")
+
+ p=input()
+ p=p.lower()
+ if ("don't open" in p) or ("dont" in p) or ("dont open" in p):
+  pyttsx3.speak(" ya sure")
+  pyttsx3.speak(" ok,then please write what you wanna open")
+  print(" \t->opera \n\t->safari \n\t->iMovie \n\t->keynote \n\t->VLC \n\t->one-drive \n\t->teamviewer \n\t->zoom(video calling app) \n\t->whatsapp \n\t->winzip \n\t->Xcode  \n\t->SUBLIME TEXT \n\t-> android file transfer \n\t->to exit the program")
+  p=input()
+  p=p.lower()
+ if ("browser" in p) or ("opera" in p) or ("search" in p) :
+  os.system("open /applications/opera.app")
+ 
+ elif ("safari" in p) or ("default search" in p) and ("don't open" not in p):
+  os.system("open /applications/safari.app")
+ 
+ elif ("imovie" in p) or ("movie maker" in p) or ("movie-maker" in p) or ("moviemaker" in p):
+    os.system("open /applications/iMovie.app")
+ 
+ elif ("ppt" in p) or ("keynote" in p) or ("slides" in p):
+    os.system("open /applications/keynote.app")
+ 
+ elif ("movie" in p) or ("vlc" in p) or ("picture"in p) or ("media player" in p) or ("mediaplayer" in p):
+    os.system("open /applications/vlc.app")
+ 
+ elif ("onedrive" in p) or ("one-drive" in p) or ("one drive" in p) or ("drive" in p):
+    os.system("open /applications/onedrive.app")
+ 
+ elif ("view" in p) or ("teamviewer" in p) or ("team-viewer" in p):
+    os.system("open /applications/teamviewer.app")
+ 
+ elif  ("zoom" in p) or ("zoom.us" in p) or ("zoom(video calling app)") in p or ("zoom meeting" in p) or ("zoommeeting" in p) or ("video call" in p):
+    os.system("open /applications/zoom.us.app")
+ 
+ elif ("chat" in p) or ("whatsapp" in p) or ("social-media" in p) or ("social" in p):
+    os.system("open /applications/whatsapp.app")
+ 
+ elif ("zip" in p) or ("winzip" in p) or ("zipper" in p):
+    os.system("open /applications/winzip.app")  
+ 
+ elif ("xcode" in p) or ("code" in p):
+    os.system("open /applications/xcode.app")  
+
+ elif ("xcode" in p) or ("text" in p) or ("Sublime" in p) or ("sublime text" in p) or ("notes" in p):
+    os.system("open /applications/'Sublime Text.app'")  
+
+ elif ("transfer" in p) or("android file transfer" in p) or("file transfer" in p) or ("filetransfer" in p):
+    os.system("open /applications/'Android File Transfer.app'")  
+
+
+ elif ("exit" in p) or ("close" in p) or ("terminate") in p or ("bye" in p):
+    pyttsx3.speak("  wish to see you again thank you for using the menu  the program  is terminating ")
+    break  
+
+ else:
+  pyttsx3.speak("the in entered by you ")
+  pyttsx3.speak(p)
+  pyttsx3.speak("not found please enter valid name from list")
+  print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+
