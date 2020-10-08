@@ -22,7 +22,7 @@ while True:
  if ("don't open" in p) or ("dont" in p) or ("dont open" in p):
   pyttsx3.speak(" ya sure")
   pyttsx3.speak(" ok,then please write what you wanna open")
-  print(" \t->opera \n\t->safari \n\t->iMovie \n\t->keynote \n\t->VLC \n\t->one-drive \n\t->teamviewer \n\t->zoom(video calling app) \n\t->whatsapp \n\t->winzip \n\t->Xcode  \n\t->SUBLIME TEXT \n\t-> android file transfer \n\t->to exit the program")
+  print(" \t->opera \n\t->safari \n\t->iMovie \n\t->keynote \n\t->VLC \n\t->one-drive \n\t->teamviewer \n\t->zoom(video calling app) \n\t->whatsapp \n\t->winzip \n\t->Xcode  \n\t->SUBLIME TEXT \n\t-> android file transfer \n\t->MUSIC \n\t->to exit the program")
   p=input()
   p=p.lower()
  if ("browser" in p) or ("opera" in p) or ("search" in p) :
@@ -64,6 +64,8 @@ while True:
  elif ("transfer" in p) or("android file transfer" in p) or("file transfer" in p) or ("filetransfer" in p):
     os.system("open /applications/'Android File Transfer.app'")  
 
+ elif ("music" in p) or ("song" in p) or ("songs" in p):
+    os.system("open /applications/imusic.app")
 
  elif ("exit" in p) or ("close" in p) or ("terminate") in p or ("bye" in p):
     pyttsx3.speak("  wish to see you again thank you for using the menu  the program  is terminating ")
